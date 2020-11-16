@@ -20,7 +20,7 @@ namespace EntityFrameworkDemo
 
         private void LoadProducts()
         {
-            dgwProducts.DataSource = _productDal.GetAll();
+            dgwProducts.DataSource = _productDal.GetProducts();
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
@@ -122,7 +122,8 @@ namespace EntityFrameworkDemo
         
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            dgwProducts.DataSource = _productDal.GetAll(txtSearch.Text);
+            dgwProducts.DataSource = _productDal.GetProducts(txtSearch.Text);
         }
+        
     }
 }
